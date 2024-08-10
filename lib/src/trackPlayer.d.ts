@@ -263,3 +263,8 @@ export declare function getRepeatMode(): Promise<RepeatMode>;
  * Retries the current item when the playback state is `State.Error`.
  */
 export declare function retry(): Promise<any>;
+
+
+export function enableCallMode(): Promise<void>;
+  
+export function disableCallMode(): Promise<void>;

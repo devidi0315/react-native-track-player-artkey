@@ -321,10 +321,8 @@ public class RNTrackPlayer: RCTEventEmitter, AudioSessionControllerDelegate {
 
     @objc(enableCallMode:rejecter:)
     public func enableCallMode(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
-        if(!headphonesConnected) {
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
-            try? AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSession.PortOverride.none);
-        }
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+        try? AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSession.PortOverride.none);
         resolve(player != nil)
     }
 

@@ -457,7 +457,7 @@ class MusicModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaM
     }
 
     @ReactMethod
-    fun enableCallMode(callback: Promise) {
+    fun enableCallMode(callback: Promise) = scope.launch {
         if (verifyServiceBoundOrReject(callback)) return@launch
 
         musicService.enableCallMode(true)
@@ -465,7 +465,7 @@ class MusicModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaM
     }
 
     @ReactMethod
-    fun disableCallMode(callback: Promise) {
+    fun disableCallMode(callback: Promise) = scope.launch {
         if (verifyServiceBoundOrReject(callback)) return@launch
 
         musicService.enableCallMode(false)

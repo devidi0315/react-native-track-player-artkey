@@ -337,11 +337,11 @@ class MusicService : HeadlessJsTaskService() {
 
     @MainThread
     fun enableCallMode(isEnable: Boolean) {
-        if(isEnable) {
-            player.setAudioAttributes(new com.google.android.exoplayer2.audio.AudioAttributes.Builder().setUsage(C.USAGE_VOICE_COMMUNICATION).build());
-        } else {
-            player.setAudioAttributes(new com.google.android.exoplayer2.audio.AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).build());
-        }
+        // if(isEnable) {
+        //     player.setAudioAttributes(new com.google.android.exoplayer2.audio.AudioAttributes.Builder().setUsage(C.USAGE_VOICE_COMMUNICATION).build());
+        // } else {
+        //     player.setAudioAttributes(new com.google.android.exoplayer2.audio.AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).build());
+        // }
             
     }
 
